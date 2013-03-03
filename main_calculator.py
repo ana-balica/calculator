@@ -73,6 +73,9 @@ class ControlMainWindow(QtGui.QMainWindow):
     def compute_expression(self):
         expression = self.replace_symbols()
         try:
+            # very very bad
+            # though it is used for presentation purposes of Qt GUI
+            # nonetheless only digits and special symbols can be introduces
             result = unicode(eval(expression))
         except:
             result = '#error'
